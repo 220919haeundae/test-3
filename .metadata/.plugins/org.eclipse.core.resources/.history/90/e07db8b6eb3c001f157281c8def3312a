@@ -1,0 +1,16 @@
+
+public class SetTest {
+
+	public static void main(String[] args) {
+		
+		String str1 = "하나";
+		String str2 = "둘";
+		String str3 = "셋";
+		String str4 = "하나";
+				
+		
+		Set<String> set = new HashSet<>();
+
+	}
+
+}

@@ -1,0 +1,65 @@
+package com.kh.practice.tcp;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.InetAddress;
+import java.net.Socket;
+import java.util.Scanner;
+
+public class TCPClient {
+
+	public static void main(String[] args) {
+		// 1) 사용되는 통로(소켓, 스트림) 객체 선언 및 null로 초기화
+		Scanner sc = new Scanner(System.in);
+		Socket socket = null;
+		BufferedReader br = null;
+		PrintWriter pw = null;
+		
+		// 요청할 서버의 IP주소, 포트번호 확인
+		
+		int port = 3000;
+		
+		// 2) 서버에 연결 요청(요청할 서버의 IP주소와 포트번호를 사용하여 소켓 객체 생성)
+		
+		try {
+			String ip = InetAddress.getLocalHost().getHostAddress();
+			socket = new Socket(ip, port);
+			
+			if(socket != null) {
+				//서버 연결 성공
+				System.out.println("서버 : " + ip + ":" + port + "로 연결 성공!");
+			}
+			
+			br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+			
+			pw = new PrintWriter(socket.getOutputStream());
+			
+			while(true) {
+				System.out.println("메시지 입력 : ");
+				String message = sc.nextLine();
+				
+				//서버 쪽으로 데이터 출력
+				pw.println(message);
+				pw.flush();
+				
+				//서버로부터 데이터를 입력 받기(입력)
+				String receive = br.readLine();
+				
+			}
+			
+		}catch(FileNotFoundException e) {
+		}catch(IOException e) {
+			e.printStackTrace();
+		}catch(NullPointerException e) {
+		}finally {
+			br.close();
+			pw.close();
+			
+			socket.close();
+		}
+	}
+
+}

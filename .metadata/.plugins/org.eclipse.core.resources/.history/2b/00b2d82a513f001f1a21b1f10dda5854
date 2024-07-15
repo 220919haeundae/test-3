@@ -1,0 +1,32 @@
+package com.kh.ch05_object;
+
+public class Student {
+	// 필드부 : [접근제한자] [예약어] 자료형 필드명;
+	private String name;
+	private int age;
+	private double height;
+	private String phone;
+	private String address;
+	
+	public Student(String name, int age, double height, String phone, String address) {
+		this.name = name; this.address = address;
+		this.age = age; this.phone =phone; this.height = height;
+		
+		
+	}
+	
+	@Override
+	public String toString() {
+		return "Student [name=" + name + ", age=" + age + ", height=" + height + ", phone=" + phone + ", address="
+				+ address + "]";
+	}
+	
+	
+	
+	
+	// 생성자부 : 접근제한자 클래스명([매개변수]) {}
+	
+	// 메소드부 : [접근제한자] [예약어] 반환타입 메소드명([매개변수]) {}
+	
+
+}

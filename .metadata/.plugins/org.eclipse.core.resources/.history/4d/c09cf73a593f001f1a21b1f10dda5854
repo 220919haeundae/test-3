@@ -1,0 +1,24 @@
+package com.kh.practice.tcp;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.net.Socket;
+
+public class SocketClient {
+	ChatServer chatServer;
+	Socket socket;
+	DataInputStream dis;
+	DataOutputStream dos;
+	String ClientIp;
+	String chatName;
+	
+	public SocketClient(ChatServer chatServer, Socket socket) {
+		try {
+			this.chatServer = chatServer;
+			this.socket = socket;
+			this.dis = new DataInputStream(socket.getInputStream());
+			this.dos = new DataOutputSTream(socket.getOutputStream());
+		}
+	}
+
+}

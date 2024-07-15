@@ -1,0 +1,64 @@
+package com.kh.ch14_collection;
+
+public class SetRun {
+	/*
+	 * Set : 순서가 없고, 중복도 허용되지 않음
+	 * 
+	 * * 중복 체크 : equals(), hashCode()를 통해 중복 데이터가 체크됨
+	 */
+
+	public static void main(String[] args) {
+
+	}
+
+}
+
+class Student {
+	private String name;
+	private int score;
+	
+	public Student(String name, int score) {
+		this.name = name;
+		this.score = score;
+	}
+
+	@Override
+	public int hashCode() {
+		return name.hashCode() + score;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Student) {
+			Student s = (Student) obj;
+			
+			return name.equals(s.getName()) && (score == s.getScore());
+		} else return false;
+		
+	}
+
+	@Override
+	public String toString() {
+		return super.toString();
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
+	
+	
+	
+	
+}

@@ -1,0 +1,17 @@
+package server;
+
+import java.net.ServerSocket;
+
+public class ServerRun {
+
+	public static void main(String[] args) {
+		ServerSocket serverSocket;
+		
+		try {
+			serverSocket = new ServerSocket(50001);
+		}
+		
+
+	}
+
+}

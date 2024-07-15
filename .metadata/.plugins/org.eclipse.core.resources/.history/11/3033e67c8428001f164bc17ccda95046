@@ -1,0 +1,20 @@
+package com.kh.practice1;
+
+import java.util.Scanner;
+
+public class OperationPractice2 {
+
+	public static void main(String[] args) {
+		double x;
+		double y;
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("가로: ");
+		x = sc.nextDouble();
+		System.out.print("세로: ");
+		y = sc.nextDouble();
+		
+		System.out.print("면적: " + x * y + "/n");
+		System.out.print("둘레: " + (2*x + 2*y));
+	}
+}

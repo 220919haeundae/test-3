@@ -1,0 +1,35 @@
+package com.kh.practice.tcp;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class ChatServer {
+	ServerSocket serverSocket;
+	ExecutorService threadPool = Executors.newFixedThreadPool(100);
+	Map<String, SocketClient> chatRoom = Collections.synchronizedMap(new HashMap<>());
+	
+	public void start() throws IOException {
+		serverSocket = new ServerSocket(50001);
+		System.out.println("[서버] 시작됨");
+		
+		Thread thread = new Thread(() -> {
+			try {
+				while(true) {
+					Socket socket = serverSocket.accept();
+					SocketClient sc = new SocketClient(this, socket);
+				}
+			}catch(IOException e) {}
+		});
+	}
+	
+	
+	public static void main(String[] args) {
+
+	}
+
+}

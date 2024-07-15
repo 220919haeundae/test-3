@@ -1,0 +1,16 @@
+package com.kh.ch05_object;
+
+public class ObjectArrayRun {
+
+	public static void main(String[] args) {
+		
+		Product[] p = new Product[3];
+		
+		for(int i = 0; i < p.length; i++) {
+			System.out.println(p[i].getName());
+			
+		}
+
+	}
+
+}

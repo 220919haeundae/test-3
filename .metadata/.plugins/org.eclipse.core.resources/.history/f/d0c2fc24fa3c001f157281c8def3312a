@@ -1,0 +1,7 @@
+package com.kh.practice.set.controller;
+
+public class LotteryController {
+	HashSet<Lottery> set = new HashSet<>();
+	
+
+}

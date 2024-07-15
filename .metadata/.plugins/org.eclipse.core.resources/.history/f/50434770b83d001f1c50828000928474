@@ -1,0 +1,44 @@
+package com.kh.practice.map.view;
+
+import java.util.Scanner;
+
+public class MemberMenu {
+	private Scanner sc = new Scanner(System.in);
+	
+	public void memberMenu() {
+		
+		while(true) {
+			System.out.println("========== KH 사이트 ==========");
+			System.out.println("=====***** 메인 메뉴 *****=====");
+			System.out.println("1. 회원가입");
+			System.out.println("2. 로그인");
+			System.out.println("3. 같은 이름 회원 찾기");
+			System.out.println("9. 종료");
+			System.out.println();
+			System.out.print("메뉴 번호: ");
+			int num = sc.nextInt();
+			sc.nextLine();
+			switch(num) {
+			case 1 : 
+			case 2 : 
+			case 3 :
+			case 9 :
+				default :
+					System.out.println("메뉴번호를 잘못 입력했습니다. 다시 입력해주세요.");
+					continue;
+			}
+		}
+		
+	}
+	
+	public void joinMembership() {}
+	
+	public void login() {}
+	
+	public void changePassword() {}
+	
+	public void changeName() {}
+	
+	public void sameName() {}
+
+}

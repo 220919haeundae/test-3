@@ -1,0 +1,14 @@
+package com.kh.practice.set.controller;
+
+import java.util.HashSet;
+import com.kh.practice.set.model.vo.Lottery;
+
+public class LotteryController {
+	HashSet<Lottery> set = new HashSet<>();
+	
+	public boolean deleteObject(Lottery l) {
+		return set.remove(l);
+	}
+	
+
+}

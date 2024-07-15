@@ -1,0 +1,17 @@
+package com.kh.practice.tcp;
+
+import java.net.ServerSocket;
+
+public class TCPServer {
+	static ServerSocket serverSocket = null;
+	
+	public static void main(String[] args) {
+		try {
+			serverSocket = new ServerSocket(50001);
+		}catch(IOException e) {
+			
+		}
+		
+	}
+
+}

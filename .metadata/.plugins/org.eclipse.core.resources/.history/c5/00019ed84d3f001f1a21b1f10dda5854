@@ -1,0 +1,25 @@
+package com.kh.practice.tcp;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+
+public class TCPServer {
+	static ServerSocket serverSocket = null;
+	
+	public static void main(String[] args) {
+		try {
+			//서버 시작
+			serverSocket = new ServerSocket(50001);
+			
+			while(true) {
+				Socket socket = serverSocket.accept();
+				
+				
+			}
+		}catch(IOException e) {
+			
+		}
+		
+	}
+
+}

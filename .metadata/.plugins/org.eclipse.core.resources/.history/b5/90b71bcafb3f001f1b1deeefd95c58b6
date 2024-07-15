@@ -1,0 +1,8 @@
+package com.kh.ch09_interface;
+
+public abstract class Plant implements GrowingPlant {
+	
+	// # name : String
+	protected String name;
+	
+}

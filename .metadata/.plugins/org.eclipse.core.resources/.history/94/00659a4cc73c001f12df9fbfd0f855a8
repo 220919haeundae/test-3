@@ -1,0 +1,13 @@
+package com.kh.practice.list.library.view;
+
+import java.net.InetAddress;
+
+public class InetAddressTest {
+
+	public static void main(String[] args) {
+		InetAddress ia = InetAddress.getByName("naver.com");
+		
+		
+	}
+
+}

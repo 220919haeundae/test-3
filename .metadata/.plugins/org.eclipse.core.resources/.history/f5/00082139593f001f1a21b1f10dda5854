@@ -1,0 +1,13 @@
+package com.kh.practice.tcp;
+
+import java.net.Socket;
+
+public class SocketClient {
+	ChatServer chatServer;
+	Socket socket;
+	DataInputStream dis;
+	DataOutputStream dos;
+	String ClientIp;
+	String chatName;
+
+}

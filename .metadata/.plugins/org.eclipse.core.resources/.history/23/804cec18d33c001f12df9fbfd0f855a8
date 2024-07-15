@@ -1,0 +1,16 @@
+package server;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class ServerRun {
+	public static void main(String[] args) {
+		MyServer myServer = new MyServer();
+		
+		myServer.serverStart();
+	}
+	
+	
+
+}

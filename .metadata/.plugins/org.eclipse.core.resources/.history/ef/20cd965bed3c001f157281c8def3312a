@@ -1,0 +1,34 @@
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
+public class SetTest {
+
+	public static void main(String[] args) {
+		
+		
+		TestNum tn1 = new TestNum(10);
+		TestNum tn2 = new TestNum(20);
+		TestNum tn3 = new TestNum(30);
+		TestNum tn4 = new TestNum(10);
+		
+		Set<TestNum> set = new HashSet<>();
+		
+		set.add(str1);
+		set.add(str2);
+		set.add(str3);
+		set.add(str4);
+		
+		Iterator<String> strIter = set.iterator();
+		while (true) {
+			if(strIter.hasNext()) {
+				System.out.println(strIter.next());
+			} else {
+				break;
+			}
+			
+		}
+		
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.kh.practice.list.library.view;
+
+import java.io.IOException;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
+public class InetAddressTest throws Exception {
+
+	//	InetAddress
+	InetAddress ia = InetAddress.getLocalHost();
+	
+	//	SocketAddress (상속)-> InetSocketAddress
+
+	//	Socket
+
+}
+

@@ -1,0 +1,9 @@
+package com.kh.practice.set.model.compare;
+
+import com.kh.practice.set.model.vo.Lottery;
+
+public class SortedLottery implements Comparator<Lottery> {
+	
+	
+
+}

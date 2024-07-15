@@ -1,0 +1,12 @@
+package com.kh.practice;
+
+public class ThreadRun {
+
+	public static void main(String[] args) {
+		String name = Thread.currentThread().getName();
+		Thread thread1 = new Thread(new Task1());
+		System.out.println(name + ":" + "main Thread");
+
+	}
+
+}

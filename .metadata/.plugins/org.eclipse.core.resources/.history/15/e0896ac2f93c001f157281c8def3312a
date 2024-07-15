@@ -1,0 +1,7 @@
+package com.kh.practice.set.view;
+
+public class LotteryMenu {
+	private Scanner sc = new Scanner(System.in);
+	private LotteryController lc = new LotteryController():
+
+}

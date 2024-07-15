@@ -1,0 +1,30 @@
+package com.kh.ch14_collection;
+
+public class MapRun {
+	/*
+	 * Map<K, V> : key - value 형식으로 데이터를 관리하는 콜렉션
+	 * => List, Set과는 달리 Collection을 구현한 클래스는 아님
+	 * 		(메소드가 일부 다름)
+	 */
+	public static void main(String[] args) {
+		HashMap<String, Snack> hmap = new HashMap<>();
+		
+		// 데이터 추가 : put(K key, V value)
+		
+	}
+
+}
+
+class Snack {
+	private String flavor;
+	private int calory;
+	
+	public Snack(String flavor, int calory) {
+		this.flavor = flavor;
+		this.calory = calory;
+	}
+	
+	public String toString() {
+		return "맛=" + flavor + ", 칼로리=" + calory;
+	}
+}

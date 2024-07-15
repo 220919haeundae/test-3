@@ -1,0 +1,13 @@
+package com.kh.ch14_collection;
+
+public class MapRun {
+
+	public static void main(String[] args) {
+		/*
+		 * Map<K, V> : key - value 형식으로 데이터를 관리하는 콜렉션
+		 */
+		
+		
+	}
+
+}

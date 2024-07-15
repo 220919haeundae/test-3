@@ -1,0 +1,57 @@
+package com.kh.practice.set.controller;
+
+import java.util.HashSet;
+import java.util.Iterator;
+
+import com.kh.practice.set.model.vo.Lottery;
+
+public class LotteryController {
+	HashSet<Lottery> set = new HashSet<>();
+	HashSet<Lottery> winSet = new HashSet<>();
+	
+	public boolean insertObject(Lottery l) {
+		return set.add(l);
+	}
+	
+	public boolean deleteObject(Lottery l) {
+		if(winSet.remove(l)) {
+			Iterator<Lottery> it = set.iterator();
+			if(it.hasNext()) {
+				winSet.add(it.next());
+			}
+		}
+		return set.remove(l);
+	}
+	
+	public HashSet<Lottery> winObject() {
+		if(winSet.size() == 4) {
+			return winSet;
+		} else {
+			for(Lottery l : set) {
+				winSet.add(l);
+			}
+			reuturn winSet;
+		}
+		
+		
+	}
+	
+	public TreeSet<Lottery> sortedObject() {
+		return;
+	}
+	
+	public boolean searchWinner(Lottery l) {
+		return
+	}
+
+	public HashSet<Lottery> getSet() {
+		return set;
+	}
+
+	public void setSet(HashSet<Lottery> set) {
+		this.set = set;
+	}
+	
+	
+
+}

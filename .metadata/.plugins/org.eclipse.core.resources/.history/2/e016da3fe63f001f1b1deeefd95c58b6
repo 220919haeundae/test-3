@@ -1,0 +1,31 @@
+package com.kh.practice.tcp;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.Socket;
+import java.util.Scanner;
+
+public class Client {
+	private static DataInputStream dis;
+	private static DataOutputStream dos;
+	private static Scanner sc = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		try {
+			Socket socket = new Socket("localhost", 50001);
+			
+			while(true) {
+				try {
+					dis = new DataInputStream(socket.getInputStream());
+					dos = new DataOutputStream(socket.getOutputStream());
+					
+					String sendMessage = sc.nextLine();) 
+				}catch (IOException e) {}
+			}
+			
+			
+		}catch(IOException e) {}
+	}
+
+}

@@ -1,0 +1,16 @@
+package com.kh.practice1;
+
+public class Student {
+	
+	String studentName;
+
+	double languageScore;
+	double mathScore;
+	double englishScore;
+	
+	public Student(String name, double lScore) {
+		this.studentName = name;
+		this.languageScore = lScore;
+	}
+	
+}

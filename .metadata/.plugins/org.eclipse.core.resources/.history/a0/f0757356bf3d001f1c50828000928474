@@ -1,0 +1,54 @@
+package com.kh.practice.map.controller;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.kh.practice.map.model.vo.Member;
+
+public class MemberController {
+	private Map<String, Member> memberList = new HashMap<>();
+	
+	public boolean joinMembership(String id, Member m) {
+		if(memberList.get(id) != null) {
+			memberList.put(id, m);
+			return true;
+		}
+		return false;
+	}
+
+	public String logIn(String id, String password) {
+		Member m;
+		if((m = memberList.get(id)) != null) {
+			if(m.getPassword().equals(password)) {
+				return m.getName();
+			}
+		}
+		return null;
+	}
+	
+	public boolean changePassword(String id, String oldPw, String newPw) {
+		if(memberList.containsKey(id)) {
+			Member m = memberList.get(id);
+			if(m.getPassword().equals(oldPw)) {
+				memberList.remove(id);
+				memberList.put(id, new Member(newPw, m.getName()));
+				return true;
+			}
+			
+		}
+		return false;
+	}
+	
+	public boolean changeName(String id, String newName) {
+		if(memberList.containsKey(id)) {
+			Member m = memberList.get(id);
+			String password = m.getPassword();
+			memberList.remove(m);
+			memberList.put(id, new Member(password, newName));
+			return true;
+		}
+		return false;
+	}
+	
+	
+}

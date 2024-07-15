@@ -1,0 +1,31 @@
+package server;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class ServerRun {
+	private boolean stop = false;
+	ServerSocket serverSocket;
+	
+	public static void main(String[] args) {
+		
+		
+		try {
+			serverSocket = new ServerSocket(50001);
+			System.out.println("서버 시작");
+			while(!stop) {
+				System.out.println("클라이언트 연결요청 대기");
+				Socket socket = serverSocket.accept();
+				System.out.println("클라이언트 요청 수락");
+			}
+		}catch(IOException e) {}
+		
+
+	}
+	
+	public void setStop(boolean t) {
+		this.
+	}
+
+}

@@ -1,0 +1,22 @@
+package com.kh.practice1;
+
+public class test {
+
+	public static int main(String[] args) {
+
+		int num1 = 10;
+		
+		int num2 = 13;
+		
+		int num;
+		if (num1 > num2) {
+			return num1;
+		} else {
+			return num2;
+		}
+		
+		System.out.println(num);
+		
+	}
+
+}

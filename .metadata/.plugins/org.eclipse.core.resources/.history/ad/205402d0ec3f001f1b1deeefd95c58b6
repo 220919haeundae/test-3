@@ -1,0 +1,15 @@
+package com.kh.practice.tcp;
+
+import java.net.InetSocketAddress;
+import java.net.Socket;
+
+public class SocketClient {
+	private String server;
+	private Socket socket;
+	private String ip = ((InetSocketAddress)socket.getRemoteSocketAddress()).toString();
+
+	public SocketClient(String server, Socket socket) {
+		
+	}
+
+}

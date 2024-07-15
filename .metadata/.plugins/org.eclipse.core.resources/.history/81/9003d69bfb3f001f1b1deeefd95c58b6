@@ -1,0 +1,12 @@
+package com.kh.ch09_interface;
+
+public abstract class Plant implements GrowingPlant {
+	@Override
+	public void sprinkleWater() {
+		// TODO Auto-generated method stub
+	}
+	@Override
+	public void baskSun() {
+		// TODO Auto-generated method stub
+	}
+}

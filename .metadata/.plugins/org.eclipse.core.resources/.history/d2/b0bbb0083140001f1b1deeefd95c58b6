@@ -1,0 +1,14 @@
+package com.kh.ch14_collection;
+
+public class SetRun {
+	/*
+	 * Set : 순서가 없고, 중복도 허용되지 않음
+	 * 
+	 * * 중복 체크 : equals(), hashCode()
+	 */
+
+	public static void main(String[] args) {
+
+	}
+
+}

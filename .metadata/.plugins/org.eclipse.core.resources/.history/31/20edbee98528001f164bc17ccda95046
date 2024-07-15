@@ -1,0 +1,14 @@
+package com.kh.practice1;
+
+import java.util.Scanner;
+
+public class OperationPractice3 {
+
+	public static void main(String[] args) {
+	
+		Student st1 = new Student("용식", 80, 90, 88);
+		Student st2 = new Student("용하", 85, 91, 87);
+		Student st3 = new Student("용선", 79, 95, 89);
+	}
+
+}

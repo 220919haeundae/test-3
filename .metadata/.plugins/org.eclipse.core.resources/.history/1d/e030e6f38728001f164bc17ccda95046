@@ -1,0 +1,26 @@
+package com.kh.practice1;
+
+import java.util.HashMap;
+import java.util.Scanner;
+import java.util.stream.Collectors;
+
+public class OperationPractice3 {
+
+	public static void main(String[] args) {
+	
+		Student st1 = new Student("용식", 80);
+		Student st2 = new Student("용하", 85);
+		Student st3 = new Student("용선", 79);
+		
+		Student[] stArray = new Student[3];
+		stArray[0] = st1;
+		stArray[1] = st2;
+		stArray[2] = st3;
+		double sum = 0;
+		for(Student s : stArray) {
+			sum += s.getScore();
+		}
+		System.out.println(sum/)
+	}
+
+}

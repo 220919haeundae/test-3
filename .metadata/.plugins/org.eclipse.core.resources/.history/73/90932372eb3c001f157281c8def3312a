@@ -1,0 +1,37 @@
+package server;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.EOFException;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+public class MyClient {
+	
+	public static void main(String[] args) {
+		try {
+			Socket socket = new Socket("localhost", 50001);
+			DataInputStream dis = new DataInputStream(new BufferedInputStream(socket.getInputStream()));
+			DataOutputStream dos = new DataOutputStream(new BufferedOutputStream(socket.getOutputStream()));
+			String message = "클라이언트에서 보낸 메세지1";
+			dos.writeChars(message);
+			StringBuilder sb = new StringBuilder();
+			
+			try {
+				while(true) {
+					sb.append(dis.readChar());
+					
+				}
+			}catch(EOFException e) {}
+			
+			System.out.println(sb.toString());
+			socket.close();
+		} catch (UnknownHostException e) {
+		} catch (IOException e) {
+		}
+	}
+}
